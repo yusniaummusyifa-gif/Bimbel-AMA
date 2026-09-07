@@ -605,22 +605,29 @@
         // Mulai timer saat halaman selesai dimuat
         document.addEventListener("DOMContentLoaded", startTimer);
     </script>
-    <!-- MODAL POPUP DETAIL FASILITAS -->
-    <div id="facilityModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl relative transform transition-all animate-scaleIn">
-            <!-- Tombol Close (X) -->
-            <button onclick="closeModal()" class="absolute top-4 right-4 bg-slate-100 hover:bg-slate-200 text-slate-700 w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl z-10 transition">
+    <!-- MODAL POPUP DETAIL FASILITAS (TAMPILAN FULL GAMBAR) -->
+    <div id="facilityModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4 md:p-8">
+        
+        <!-- Ukuran pop-up diperlebar menjadi max-w-4xl agar gambar tampil maksimal -->
+        <div class="bg-white rounded-3xl max-w-4xl w-full overflow-hidden shadow-2xl relative transform transition-all animate-scaleIn flex flex-col">
+            
+            <!-- Tombol Close (X) dibuat lebih menonjol -->
+            <button onclick="closeModal()" class="absolute top-4 right-4 bg-white/90 hover:bg-white text-slate-800 w-10 h-10 rounded-full flex items-center justify-center font-bold text-2xl z-10 transition shadow-lg border border-slate-200 focus:outline-none">
                 &times;
             </button>
             
             <!-- Konten Modal -->
-            <div class="max-h-[85vh] overflow-y-auto">
-                <img id="modalImg" src="" alt="Detail Fasilitas" class="w-full h-64 md:h-80 object-cover">
-                <div class="p-6 md:p-8">
-                    <h3 id="modalTitle" class="text-2xl md:text-3xl font-extrabold text-blue-900 mb-3"></h3>
-                    <p id="modalDesc" class="text-slate-600 text-base md:text-lg leading-relaxed mb-6"></p>
-                    <div class="bg-blue-50 border border-blue-100 rounded-2xl p-4 text-sm text-blue-900">
-                        💡 <strong>Keuntungan Mitra:</strong> Fasilitas ini sudah dirancang "Terima Beres" agar Anda bisa langsung fokus mengembangkan cabang tanpa harus repot membuatnya dari nol.
+            <div class="max-h-[90vh] overflow-y-auto">
+                
+                <!-- Perubahan Kunci: w-full h-auto membuat gambar tampil 100% utuh tanpa terpotong -->
+                <img id="modalImg" src="" alt="Detail Fasilitas" class="w-full h-auto bg-slate-100">
+                
+                <div class="p-6 md:p-10 text-center md:text-left">
+                    <h3 id="modalTitle" class="text-2xl md:text-4xl font-extrabold text-blue-900 mb-4"></h3>
+                    <p id="modalDesc" class="text-slate-600 text-lg md:text-xl leading-relaxed mb-8"></p>
+                    <div class="bg-blue-50 border border-blue-100 rounded-2xl p-5 text-sm md:text-base text-blue-900 flex items-start gap-4">
+                        <span class="text-2xl">💡</span>
+                        <p><strong>Keuntungan Mitra:</strong> Fasilitas ini sudah dirancang "Terima Beres" agar Anda bisa langsung fokus mengembangkan cabang tanpa harus repot membuatnya dari nol.</p>
                     </div>
                 </div>
             </div>
