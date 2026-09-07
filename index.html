@@ -394,31 +394,36 @@
                 <div class="bg-red-50 border border-red-200 rounded-xl p-6 mb-8">
                     <p class="text-red-700 font-bold text-lg mb-4">⚠️ PERHATIAN: Promo Subsidi Ini HANYA DIBUKA UNTUK 5 MITRA PERTAMA bulan ini demi menjaga eksklusivitas wilayah!</p>
                     
-                    <!-- COUNTDOWN TIMER & PROGRESS BAR -->
+                    <!-- COUNTDOWN TIMER & PROGRESS BAR DENGAN "HARI" -->
                     <div class="flex flex-col items-center justify-center mt-6">
                         <p class="text-slate-800 font-bold mb-3">Promo Berakhir Dalam:</p>
-                        <div class="flex gap-3 md:gap-6 text-center">
-                            <div class="bg-slate-800 text-white rounded-lg p-3 w-20 md:w-24 shadow-inner">
-                                <span id="hours" class="text-3xl md:text-4xl font-black">04</span>
-                                <p class="text-xs md:text-sm mt-1 text-slate-300">Jam</p>
+                        <div class="flex gap-2 md:gap-4 text-center justify-center">
+                            <div class="bg-slate-800 text-white rounded-lg p-2 md:p-3 w-16 md:w-20 shadow-inner">
+                                <span id="days" class="text-2xl md:text-3xl font-black">00</span>
+                                <p class="text-[10px] md:text-xs mt-1 text-slate-300">Hari</p>
                             </div>
-                            <div class="bg-slate-800 text-white rounded-lg p-3 w-20 md:w-24 shadow-inner">
-                                <span id="minutes" class="text-3xl md:text-4xl font-black">23</span>
-                                <p class="text-xs md:text-sm mt-1 text-slate-300">Menit</p>
+                            <div class="bg-slate-800 text-white rounded-lg p-2 md:p-3 w-16 md:w-20 shadow-inner">
+                                <span id="hours" class="text-2xl md:text-3xl font-black">00</span>
+                                <p class="text-[10px] md:text-xs mt-1 text-slate-300">Jam</p>
                             </div>
-                            <div class="bg-slate-800 text-white rounded-lg p-3 w-20 md:w-24 shadow-inner">
-                                <span id="seconds" class="text-3xl md:text-4xl font-black">15</span>
-                                <p class="text-xs md:text-sm mt-1 text-slate-300">Detik</p>
+                            <div class="bg-slate-800 text-white rounded-lg p-2 md:p-3 w-16 md:w-20 shadow-inner">
+                                <span id="minutes" class="text-2xl md:text-3xl font-black">00</span>
+                                <p class="text-[10px] md:text-xs mt-1 text-slate-300">Menit</p>
+                            </div>
+                            <div class="bg-slate-800 text-white rounded-lg p-2 md:p-3 w-16 md:w-20 shadow-inner">
+                                <span id="seconds" class="text-2xl md:text-3xl font-black">00</span>
+                                <p class="text-[10px] md:text-xs mt-1 text-slate-300">Detik</p>
                             </div>
                         </div>
                         
+                        <!-- KUOTA REAL 0/5 -->
                         <div class="mt-8 w-full max-w-md">
                             <div class="flex justify-between text-sm md:text-base font-bold text-slate-700 mb-2">
-                                <span>Kuota Terpakai: 3</span>
-                                <span class="text-red-600 animate-pulse">Sisa Kuota: 2 Mitra</span>
+                                <span>Kuota Terpakai: 0</span>
+                                <span class="text-red-600 animate-pulse">Sisa Kuota: 5 Mitra</span>
                             </div>
                             <div class="w-full bg-slate-300 rounded-full h-5 shadow-inner overflow-hidden">
-                                <div class="bg-gradient-to-r from-red-500 to-red-600 h-5 rounded-full" style="width: 60%"></div>
+                                <div class="bg-gradient-to-r from-red-500 to-red-600 h-5 rounded-full" style="width: 0%"></div>
                             </div>
                         </div>
                     </div>
@@ -544,28 +549,38 @@
             window.open(waLink, '_blank');
         }
 
-        // Countdown Timer Logic
+        // LOGIKA TIMER HINGGA AKHIR BULAN
         function startTimer() {
-            let timer = 4 * 60 * 60 + 23 * 60 + 15; 
-            const hEl = document.getElementById('hours');
-            const mEl = document.getElementById('minutes');
-            const sEl = document.getElementById('seconds');
+            function updateCountdown() {
+                const now = new Date();
+                // Mendapatkan hari terakhir di bulan ini (pukul 23:59:59)
+                const endOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59);
+                
+                const diff = endOfMonth - now;
 
-            const interval = setInterval(() => {
-                let h = Math.floor(timer / 3600);
-                let m = Math.floor((timer % 3600) / 60);
-                let s = timer % 60;
-
-                hEl.textContent = h < 10 ? '0' + h : h;
-                mEl.textContent = m < 10 ? '0' + m : m;
-                sEl.textContent = s < 10 ? '0' + s : s;
-
-                if (timer > 0) {
-                    timer--;
-                } else {
-                    timer = 4 * 60 * 60 + 23 * 60 + 15; 
+                if (diff <= 0) {
+                    document.getElementById('days').textContent = "00";
+                    document.getElementById('hours').textContent = "00";
+                    document.getElementById('minutes').textContent = "00";
+                    document.getElementById('seconds').textContent = "00";
+                    return;
                 }
-            }, 1000);
+
+                // Kalkulasi hari, jam, menit, detik
+                const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+                // Update tampilan dengan format 2 digit
+                document.getElementById('days').textContent = d < 10 ? '0' + d : d;
+                document.getElementById('hours').textContent = h < 10 ? '0' + h : h;
+                document.getElementById('minutes').textContent = m < 10 ? '0' + m : m;
+                document.getElementById('seconds').textContent = s < 10 ? '0' + s : s;
+            }
+
+            updateCountdown(); // Jalankan langsung agar tidak ada jeda 1 detik
+            setInterval(updateCountdown, 1000); // Perbarui setiap 1 detik
         }
         
         // Mulai timer saat halaman selesai dimuat
