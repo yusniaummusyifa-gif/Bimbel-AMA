@@ -179,6 +179,81 @@
             &copy; 2026 Bimbel Metode AMA. All rights reserved.
         </div>
     </footer>
+<!-- AUDIO ELEMENT -->
+    <!-- Ganti 'audio/jingle-ama.mp3' dengan nama dan lokasi file musik Anda -->
+    <audio id="bg-music" loop>
+        <source src="Aku_Mahir_Baca.mp3" type="audio/mpeg">
+    </audio>
 
+    <!-- TOMBOL FLOATING MUSIC -->
+    <button id="music-toggle" class="fixed bottom-24 right-6 md:bottom-6 md:right-auto md:left-6 z-50 bg-white/90 backdrop-blur border border-slate-200 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group flex items-center justify-center h-12 w-12 focus:outline-none">
+        <!-- Icon Suara Mati (Default saat diblokir browser) -->
+        <svg id="icon-muted" class="w-6 h-6 text-slate-500 group-hover:text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"></path>
+        </svg>
+        <!-- Icon Suara Menyala (Tersembunyi di awal) -->
+        <svg id="icon-playing" class="w-6 h-6 text-orange-500 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+        </svg>
+    </button>
+
+    <!-- SCRIPT LOGIKA AUDIO -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const music = document.getElementById('bg-music');
+            const toggleBtn = document.getElementById('music-toggle');
+            const iconMuted = document.getElementById('icon-muted');
+            const iconPlaying = document.getElementById('icon-playing');
+            
+            let isPlaying = false;
+            let userHasInteracted = false;
+
+            // Fungsi untuk mengubah tampilan tombol
+            const updateButtonState = () => {
+                if (isPlaying) {
+                    iconMuted.classList.add('hidden');
+                    iconPlaying.classList.remove('hidden');
+                    toggleBtn.classList.add('animate-pulse');
+                } else {
+                    iconMuted.classList.remove('hidden');
+                    iconPlaying.classList.add('hidden');
+                    toggleBtn.classList.remove('animate-pulse');
+                }
+            };
+
+            // Mencoba putar otomatis saat web dimuat
+            music.play().then(() => {
+                isPlaying = true;
+                updateButtonState();
+            }).catch((error) => {
+                console.log("Autoplay diblokir browser. Menunggu klik pengunjung.");
+            });
+
+            // Putar saat pengunjung pertama kali klik di mana saja (untuk mengakali blokir browser)
+            document.body.addEventListener('click', () => {
+                if (!userHasInteracted && !isPlaying) {
+                    music.play();
+                    isPlaying = true;
+                    updateButtonState();
+                    userHasInteracted = true;
+                }
+            }, { once: true });
+
+            // Fungsi tombol on/off ditekan manual
+            toggleBtn.addEventListener('click', (e) => {
+                e.stopPropagation(); // Mencegah bentrok dengan klik body di atas
+                if (isPlaying) {
+                    music.pause();
+                    isPlaying = false;
+                } else {
+                    music.play();
+                    isPlaying = true;
+                }
+                userHasInteracted = true;
+                updateButtonState();
+            });
+        });
+    </script>
 </body>
 </html>
