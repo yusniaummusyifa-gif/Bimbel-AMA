@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kemitraan Bimbel Metode AMA</title>
     <!-- Favicon Bimbel AMA -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='28' fill='%231e3a8a'/><path d='M 25 70 C 35 65, 45 65, 50 75 C 55 65, 65 65, 75 70 V 35 C 65 30, 55 30, 50 40 C 45 30, 35 30, 25 35 Z' fill='%23ffffff'/><path d='M 50 15 L 53 26 L 64 30 L 53 34 L 50 45 L 47 34 L 36 30 L 47 26 Z' fill='%23f97316'/></svg>">
+    <link rel="icon" type="image/png" href="logo-ama.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -24,19 +24,11 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center gap-3">
-                    <svg class="w-10 h-10 shadow-sm rounded-xl" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#1e3a8a" />
-                                <stop offset="100%" stop-color="#1d4ed8" />
-                            </linearGradient>
-                        </defs>
-                        <rect width="100" height="100" rx="28" fill="url(#bg-grad)" />
-                        <path d="M 25 70 C 35 65, 45 65, 50 75 C 55 65, 65 65, 75 70 V 35 C 65 30, 55 30, 50 40 C 45 30, 35 30, 25 35 Z" fill="#ffffff" />
-                        <path d="M 50 15 L 53 26 L 64 30 L 53 34 L 50 45 L 47 34 L 36 30 L 47 26 Z" fill="#f97316" />
-                    </svg>
-                    <span class="font-extrabold text-2xl text-blue-900 tracking-tight">Bimbel <span class="text-orange-500">Metode AMA</span></span>
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-3 group">
+                        <img src="logo-ama.png" alt="Ikon Bimbel AMA" class="h-10 w-10 object-contain drop-shadow-sm group-hover:scale-110 transition-transform duration-300">
+                        <span class="font-extrabold text-2xl text-blue-900 tracking-tight">Bimbel <span class="text-orange-500">Metode AMA</span></span>
+                    </a>
                 </div>
                 <!-- Menu Links -->
                 <div class="hidden md:flex space-x-8 items-center">
@@ -496,7 +488,7 @@
         </a>
     </div>
 
-    <!-- MODAL POPUP DETAIL FASILITAS (TAMPILAN FULL GAMBAR) -->
+    <!-- MODAL POPUP DETAIL FASILITAS -->
     <div id="facilityModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4 md:p-8">
         <div class="bg-white rounded-3xl max-w-4xl w-full overflow-hidden shadow-2xl relative transform transition-all animate-scaleIn flex flex-col">
             <button onclick="closeModal()" class="absolute top-4 right-4 bg-white/90 hover:bg-white text-slate-800 w-10 h-10 rounded-full flex items-center justify-center font-bold text-2xl z-10 transition shadow-lg border border-slate-200 focus:outline-none">&times;</button>
@@ -551,9 +543,9 @@
             setInterval(updateCountdown, 1000);
         }
 
-        // AUDIO SCRIPT (SESSION STORAGE DURASI)
+        // AUDIO SCRIPT (SESSION STORAGE)
         document.addEventListener('DOMContentLoaded', () => {
-            startTimer(); // Jalankan timer
+            startTimer(); 
 
             const music = document.getElementById('bg-music');
             const toggleBtn = document.getElementById('music-toggle');
@@ -567,51 +559,22 @@
 
             const updateUI = () => {
                 if (isPlaying) {
-                    iconMuted.classList.add('hidden');
-                    iconPlaying.classList.remove('hidden');
-                    toggleBtn.classList.add('animate-pulse');
+                    iconMuted.classList.add('hidden'); iconPlaying.classList.remove('hidden'); toggleBtn.classList.add('animate-pulse');
                 } else {
-                    iconMuted.classList.remove('hidden');
-                    iconPlaying.classList.add('hidden');
-                    toggleBtn.classList.remove('animate-pulse');
+                    iconMuted.classList.remove('hidden'); iconPlaying.classList.add('hidden'); toggleBtn.classList.remove('animate-pulse');
                 }
             };
-            const playMusic = () => {
-                music.play().then(() => {
-                    isPlaying = true;
-                    sessionStorage.setItem('musicState', 'playing');
-                    updateUI();
-                }).catch(() => {});
-            };
-            const pauseMusic = () => {
-                music.pause();
-                isPlaying = false;
-                sessionStorage.setItem('musicState', 'paused');
-                updateUI();
-            };
-
+            const playMusic = () => { music.play().then(() => { isPlaying = true; sessionStorage.setItem('musicState', 'playing'); updateUI(); }).catch(() => {}); };
+            const pauseMusic = () => { music.pause(); isPlaying = false; sessionStorage.setItem('musicState', 'paused'); updateUI(); };
             const savedState = sessionStorage.getItem('musicState');
-            if (savedState === 'playing' || savedState === null) {
-                playMusic();
-            } else {
-                updateUI(); 
-            }
-
-            window.addEventListener('beforeunload', () => {
-                sessionStorage.setItem('musicTime', music.currentTime);
-            });
-
+            if (savedState === 'playing' || savedState === null) { playMusic(); } else { updateUI(); }
+            window.addEventListener('beforeunload', () => { sessionStorage.setItem('musicTime', music.currentTime); });
             document.body.addEventListener('click', () => {
-                if (!userHasInteracted && !isPlaying && sessionStorage.getItem('musicState') !== 'paused') {
-                    playMusic();
-                    userHasInteracted = true;
-                }
+                if (!userHasInteracted && !isPlaying && sessionStorage.getItem('musicState') !== 'paused') { playMusic(); userHasInteracted = true; }
             }, { once: true });
-
             toggleBtn.addEventListener('click', (e) => {
                 e.stopPropagation(); 
-                if (isPlaying) pauseMusic();
-                else playMusic();
+                if (isPlaying) pauseMusic(); else playMusic();
                 userHasInteracted = true;
             });
         });
