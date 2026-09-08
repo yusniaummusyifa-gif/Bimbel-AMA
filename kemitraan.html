@@ -397,11 +397,12 @@
                     </div>
 
                     <!-- STARTER KIT -->
-                    <div onclick="openModal('Starter Kit Fisik (Siap Buka!)', 'GRATIS cetakan fisik Buku Modul untuk 10 siswa pertama beserta Banner Spanduk besar siap pasang di lokasi Anda agar langsung menarik perhatian warga sekitar.', 'https://i.postimg.cc/cCdTh6gc/studio-render-1-(11).jpg')" class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition group flex flex-col cursor-pointer">
+                    <!-- MODIFIED: Update deskripsi fungsi openModal di bawah ini untuk Starter Kit -->
+                    <div onclick="openModal('Starter Kit Fisik (Siap Buka!)', 'Paket Starter Kit Fisik super lengkap siap buka! Anda akan mendapatkan:<br><ul class=\'list-disc pl-5 mt-2 space-y-1 text-slate-700\'><li>Printer thermal & kertas label/nota pembayaran</li><li>Meja lesehan (120x50x30 cm)</li><li>Buku Cepat Baca Metode AMA (Jilid 1: 10 pcs, Jilid 2: 5 pcs, Jilid 3: 5 pcs)</li><li>Buku panduan ajar untuk guru</li><li>Brosur promosi & Banner spanduk</li><li>Kartu bayar siswa 20 pcs</li></ul>', 'https://i.postimg.cc/cCdTh6gc/studio-render-1-(11).jpg')" class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition group flex flex-col cursor-pointer">
                         <img src="https://i.postimg.cc/cCdTh6gc/studio-render-1-(11).jpg" alt="Starter Kit" class="w-full h-36 object-cover group-hover:scale-105 transition duration-500">
                         <div class="p-5 flex-grow">
                             <h4 class="font-bold text-emerald-700 mb-2 leading-tight">Starter Kit Fisik (Siap Buka!) 🔍</h4>
-                            <p class="text-slate-600 text-sm">GRATIS cetakan fisik Buku Modul untuk 10 siswa pertama beserta Banner Spanduk besar siap pasang. <span class="text-orange-500 font-semibold block mt-1">(Klik untuk lihat detail)</span></p>
+                            <p class="text-slate-600 text-sm">Dapatkan paket komplit: Buku Modul, Printer Thermal, Meja Lesehan, Brosur, Kartu Bayar, dan panduan ajar. <span class="text-orange-500 font-semibold block mt-1">(Klik untuk lihat detail)</span></p>
                         </div>
                     </div>
 
@@ -507,10 +508,10 @@
     </div>
 
     <script>
-        // FUNGSI MODAL POPUP
+        // FUNGSI MODAL POPUP (MODIFIED: Menggunakan innerHTML agar mendukung bullet points)
         function openModal(title, desc, imgSrc) {
             document.getElementById('modalTitle').textContent = title;
-            document.getElementById('modalDesc').textContent = desc;
+            document.getElementById('modalDesc').innerHTML = desc;
             document.getElementById('modalImg').src = imgSrc;
             document.getElementById('facilityModal').classList.remove('hidden');
             document.body.style.overflow = 'hidden'; 
