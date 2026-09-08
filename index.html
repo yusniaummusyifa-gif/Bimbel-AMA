@@ -19,8 +19,21 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center">
-                    <span class="font-extrabold text-2xl text-blue-900">Bimbel <span class="text-orange-500">AMA</span></span>
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <!-- Kode Ikon SVG -->
+                    <svg class="w-10 h-10 shadow-sm rounded-xl" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#1e3a8a" />
+                                <stop offset="100%" stop-color="#1d4ed8" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="100" height="100" rx="28" fill="url(#bg-grad)" />
+                        <path d="M 25 70 C 35 65, 45 65, 50 75 C 55 65, 65 65, 75 70 V 35 C 65 30, 55 30, 50 40 C 45 30, 35 30, 25 35 Z" fill="#ffffff" />
+                        <path d="M 50 15 L 53 26 L 64 30 L 53 34 L 50 45 L 47 34 L 36 30 L 47 26 Z" fill="#f97316" />
+                    </svg>
+                    <!-- Teks Logo Baru -->
+                    <span class="font-extrabold text-2xl text-blue-900 tracking-tight">Bimbel <span class="text-orange-500">Metode AMA</span></span>
                 </div>
                 <!-- Menu Links -->
                 <div class="hidden md:flex space-x-8 items-center">
@@ -54,7 +67,7 @@
                     Persiapkan masa depan anak sebelum masuk SD. Dengan "Metode AMA", anak tidak hanya bisa membaca, tapi juga memahami dan menyukai proses belajarnya.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a href="https://wa.me/6289699859149?text=Halo%20admin,%20saya%20ingin%20mendaftarkan%20anak%20saya%20les%20di%20Bimbel%20AMA" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transition transform hover:-translate-y-1">
+                    <a href="https://wa.me/6289699859149?text=Halo%20admin,%20saya%20ingin%20mendaftarkan%20anak%20saya%20les%20di%20Bimbel%20Metode%20AMA" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transition transform hover:-translate-y-1">
                         Daftar Les Sekarang
                     </a>
                     <a href="#keunggulan" class="bg-white border-2 border-slate-300 hover:border-blue-900 text-slate-700 font-bold py-4 px-8 rounded-full transition">
@@ -97,7 +110,7 @@
         </div>
     </section>
 
-    <!-- SECTION TESTIMONI (BARU DITAMBAHKAN) -->
+    <!-- SECTION TESTIMONI -->
     <section id="testimoni" class="py-20 bg-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -172,7 +185,7 @@
             
             <!-- Kolom 1: Info Bimbel -->
             <div class="text-center md:text-left">
-                <span class="font-extrabold text-3xl text-white tracking-tight">Bimbel <span class="text-orange-500">AMA</span></span>
+                <span class="font-extrabold text-3xl text-white tracking-tight">Bimbel <span class="text-orange-500">Metode AMA</span></span>
                 <p class="mt-2 text-sm text-slate-400 max-w-xs mx-auto md:mx-0">Pusat Bimbingan Belajar Calistung Terbaik. Anak Mahir Membaca tanpa mengeja.</p>
             </div>
 
@@ -198,31 +211,32 @@
             </div>
         </div>
         
-        <!-- Copyright & Padding Khusus Mobile (agar tidak tertutup tombol WA melayang) -->
+        <!-- Copyright & Padding Khusus Mobile -->
         <div class="text-center mt-10 border-t border-slate-800 pt-6 text-sm text-slate-500 pb-24 md:pb-4">
             &copy; 2026 Kemitraan Bimbel Calistung Metode AMA. All rights reserved.
         </div>
     </footer>
-<!-- AUDIO ELEMENT -->
-    <!-- Ganti 'audio/jingle-ama.mp3' dengan nama dan lokasi file musik Anda -->
+
+    <!-- AUDIO ELEMENT -->
+    <!-- Ganti 'Aku_Mahir_Baca.mp3' dengan nama dan lokasi file musik Anda -->
     <audio id="bg-music" loop>
         <source src="Aku_Mahir_Baca.mp3" type="audio/mpeg">
     </audio>
 
     <!-- TOMBOL FLOATING MUSIC -->
     <button id="music-toggle" class="fixed bottom-24 right-6 md:bottom-6 md:right-auto md:left-6 z-50 bg-white/90 backdrop-blur border border-slate-200 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group flex items-center justify-center h-12 w-12 focus:outline-none">
-        <!-- Icon Suara Mati (Default saat diblokir browser) -->
+        <!-- Icon Suara Mati -->
         <svg id="icon-muted" class="w-6 h-6 text-slate-500 group-hover:text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"></path>
         </svg>
-        <!-- Icon Suara Menyala (Tersembunyi di awal) -->
+        <!-- Icon Suara Menyala -->
         <svg id="icon-playing" class="w-6 h-6 text-orange-500 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
         </svg>
     </button>
 
-    <!-- SCRIPT LOGIKA AUDIO -->
+    <!-- SCRIPT LOGIKA AUDIO DENGAN MEMORI SESI & DURASI -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const music = document.getElementById('bg-music');
@@ -233,8 +247,13 @@
             let isPlaying = false;
             let userHasInteracted = false;
 
-            // Fungsi untuk mengubah tampilan tombol
-            const updateButtonState = () => {
+            // 1. KEMBALIKAN DURASI TERAKHIR (JIKA ADA)
+            const savedTime = sessionStorage.getItem('musicTime');
+            if (savedTime) {
+                music.currentTime = parseFloat(savedTime); // Lanjut dari detik terakhir
+            }
+
+            const updateUI = () => {
                 if (isPlaying) {
                     iconMuted.classList.add('hidden');
                     iconPlaying.classList.remove('hidden');
@@ -246,36 +265,55 @@
                 }
             };
 
-            // Mencoba putar otomatis saat web dimuat
-            music.play().then(() => {
-                isPlaying = true;
-                updateButtonState();
-            }).catch((error) => {
-                console.log("Autoplay diblokir browser. Menunggu klik pengunjung.");
+            const playMusic = () => {
+                music.play().then(() => {
+                    isPlaying = true;
+                    sessionStorage.setItem('musicState', 'playing');
+                    updateUI();
+                }).catch(() => {
+                    console.log("Menunggu interaksi pengunjung...");
+                });
+            };
+
+            const pauseMusic = () => {
+                music.pause();
+                isPlaying = false;
+                sessionStorage.setItem('musicState', 'paused');
+                updateUI();
+            };
+
+            // 2. CEK INGATAN STATUS BROWSER SAAT HALAMAN DIBUKA
+            const savedState = sessionStorage.getItem('musicState');
+            if (savedState === 'playing') {
+                playMusic();
+            } else if (savedState === null) {
+                playMusic(); // Coba putar otomatis untuk pengunjung baru
+            } else {
+                updateUI(); // Jika dimatikan manual, biarkan mati
+            }
+
+            // 3. REKAM DURASI SAAT PINDAH HALAMAN / KELUAR
+            window.addEventListener('beforeunload', () => {
+                sessionStorage.setItem('musicTime', music.currentTime);
             });
 
-            // Putar saat pengunjung pertama kali klik di mana saja (untuk mengakali blokir browser)
+            // KLIK PERTAMA UNTUK MENGATASI BLOKIR BROWSER
             document.body.addEventListener('click', () => {
-                if (!userHasInteracted && !isPlaying) {
-                    music.play();
-                    isPlaying = true;
-                    updateButtonState();
+                if (!userHasInteracted && !isPlaying && sessionStorage.getItem('musicState') !== 'paused') {
+                    playMusic();
                     userHasInteracted = true;
                 }
             }, { once: true });
 
-            // Fungsi tombol on/off ditekan manual
+            // KONTROL TOMBOL MANUAL
             toggleBtn.addEventListener('click', (e) => {
-                e.stopPropagation(); // Mencegah bentrok dengan klik body di atas
+                e.stopPropagation(); 
                 if (isPlaying) {
-                    music.pause();
-                    isPlaying = false;
+                    pauseMusic();
                 } else {
-                    music.play();
-                    isPlaying = true;
+                    playMusic();
                 }
                 userHasInteracted = true;
-                updateButtonState();
             });
         });
     </script>
