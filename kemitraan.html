@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kemitraan Bimbel Calistung Metode AMA</title>
+    <title>Kemitraan Bimbel Metode AMA</title>
     <!-- Favicon Bimbel AMA -->
-    <link rel="icon" type="image/png" href="logo-ama.png">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='28' fill='%231e3a8a'/><path d='M 25 70 C 35 65, 45 65, 50 75 C 55 65, 65 65, 75 70 V 35 C 65 30, 55 30, 50 40 C 45 30, 35 30, 25 35 Z' fill='%23ffffff'/><path d='M 50 15 L 53 26 L 64 30 L 53 34 L 50 45 L 47 34 L 36 30 L 47 26 Z' fill='%23f97316'/></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -19,8 +19,44 @@
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
 
+    <!-- NAVBAR UNTUK KEMITRAAN -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <svg class="w-10 h-10 shadow-sm rounded-xl" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#1e3a8a" />
+                                <stop offset="100%" stop-color="#1d4ed8" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="100" height="100" rx="28" fill="url(#bg-grad)" />
+                        <path d="M 25 70 C 35 65, 45 65, 50 75 C 55 65, 65 65, 75 70 V 35 C 65 30, 55 30, 50 40 C 45 30, 35 30, 25 35 Z" fill="#ffffff" />
+                        <path d="M 50 15 L 53 26 L 64 30 L 53 34 L 50 45 L 47 34 L 36 30 L 47 26 Z" fill="#f97316" />
+                    </svg>
+                    <span class="font-extrabold text-2xl text-blue-900 tracking-tight">Bimbel <span class="text-orange-500">Metode AMA</span></span>
+                </div>
+                <!-- Menu Links -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-slate-600 font-semibold hover:text-orange-500 transition">Beranda</a>
+                    <a href="tentang-kami.html" class="text-slate-600 font-semibold hover:text-orange-500 transition">Tentang Kami</a>
+                    <a href="program-kelas.html" class="text-slate-600 font-semibold hover:text-orange-500 transition">Program Kelas</a>
+                    <a href="kemitraan.html" class="bg-orange-500 text-white font-bold px-4 py-2 rounded-full hover:bg-orange-600 transition shadow-sm">Peluang Mitra</a>
+                </div>
+                <!-- Menu Mobile -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-slate-600 hover:text-blue-900 focus:outline-none">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <!-- HERO SECTION / BANNER -->
-    <header class="relative bg-blue-900 text-white pt-20 pb-24 overflow-hidden">
+    <header class="relative bg-blue-900 text-white pt-32 pb-24 overflow-hidden">
         <div class="absolute inset-0 opacity-20 bg-cover bg-center" style="background-image: url('https://i.postimg.cc/cCdTh6gc/studio-render-1-(11).jpg');"></div>
         <div class="absolute inset-0 bg-gradient-to-b from-blue-900/90 to-blue-900"></div>
         <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -163,38 +199,19 @@
             </div>
             
             <div class="bg-blue-50 border border-blue-100 rounded-3xl p-8 shadow-sm">
-                <!-- LIST ALASAN BISNIS -->
                 <ul class="space-y-5 text-lg text-slate-700">
-                    <li class="flex items-start gap-4">
-                        <span class="text-green-500 text-2xl">✅</span>
-                        <div><strong>Sistem Manajemen Autopilot:</strong> Atur gaji guru, rekap SPP siswa, dan lihat laba-rugi cabang hanya dari satu layar aplikasi web. Semuanya rapi tanpa perlu pembukuan manual!</div>
-                    </li>
-                    <li class="flex items-start gap-4">
-                        <span class="text-green-500 text-2xl">✅</span>
-                        <div><strong>Nilai Jual Lebih Tinggi:</strong> Menjual bimbel yang punya portal khusus orang tua dan modul ber-HAKI jauh lebih mudah memenangkan kepercayaan wali murid dibandingkan bimbel biasa.</div>
-                    </li>
-                    <li class="flex items-start gap-4">
-                        <span class="text-green-500 text-2xl">✅</span>
-                        <div><strong>Bisnis Jasa Anti Basi:</strong> Tidak ada risiko membuang bahan baku busuk atau menumpuk barang yang tidak laku.</div>
-                    </li>
-                    <li class="flex items-start gap-4">
-                        <span class="text-green-500 text-2xl">✅</span>
-                        <div><strong>Pasar yang Selalu Ada (Evergreen):</strong> Selama masih ada anak yang akan masuk SD, les baca-tulis akan selalu dicari. Target pasar Anda otomatis terus berulang di setiap tahun ajaran baru!</div>
-                    </li>
-                    <li class="flex items-start gap-4">
-                        <span class="text-green-500 text-2xl">✅</span>
-                        <div><strong>Potensi Balik Modal Cepat:</strong> Karena ini adalah bisnis jasa pendidikan, biaya operasional Anda sangat efisien. Tidak perlu kulakan barang, sehingga margin keuntungan bersih Anda jauh lebih besar.</div>
-                    </li>
-                    <li class="flex items-start gap-4">
-                        <span class="text-green-500 text-2xl">✅</span>
-                        <div><strong>Sangat Mudah Buka Cabang:</strong> Karena semua SOP, Modul, dan Web Aplikasi sudah otomatis tersistem, Anda bisa menduplikasi sistem ini untuk buka cabang kedua dan ketiga dengan sangat mudah!</div>
-                    </li>
+                    <li class="flex items-start gap-4"><span class="text-green-500 text-2xl">✅</span><div><strong>Sistem Manajemen Autopilot:</strong> Atur gaji guru, rekap SPP siswa, dan lihat laba-rugi cabang hanya dari satu layar aplikasi web. Semuanya rapi tanpa perlu pembukuan manual!</div></li>
+                    <li class="flex items-start gap-4"><span class="text-green-500 text-2xl">✅</span><div><strong>Nilai Jual Lebih Tinggi:</strong> Menjual bimbel yang punya portal khusus orang tua dan modul ber-HAKI jauh lebih mudah memenangkan kepercayaan wali murid dibandingkan bimbel biasa.</div></li>
+                    <li class="flex items-start gap-4"><span class="text-green-500 text-2xl">✅</span><div><strong>Bisnis Jasa Anti Basi:</strong> Tidak ada risiko membuang bahan baku busuk atau menumpuk barang yang tidak laku.</div></li>
+                    <li class="flex items-start gap-4"><span class="text-green-500 text-2xl">✅</span><div><strong>Pasar yang Selalu Ada (Evergreen):</strong> Selama masih ada anak yang akan masuk SD, les baca-tulis akan selalu dicari. Target pasar Anda otomatis terus berulang di setiap tahun ajaran baru!</div></li>
+                    <li class="flex items-start gap-4"><span class="text-green-500 text-2xl">✅</span><div><strong>Potensi Balik Modal Cepat:</strong> Karena ini adalah bisnis jasa pendidikan, biaya operasional Anda sangat efisien. Tidak perlu kulakan barang, sehingga margin keuntungan bersih Anda jauh lebih besar.</div></li>
+                    <li class="flex items-start gap-4"><span class="text-green-500 text-2xl">✅</span><div><strong>Sangat Mudah Buka Cabang:</strong> Karena semua SOP, Modul, dan Web Aplikasi sudah otomatis tersistem, Anda bisa menduplikasi sistem ini untuk buka cabang kedua dan ketiga dengan sangat mudah!</div></li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- TESTIMONIAL WALI MURID (13 ORANG ASLI DARI CHAT) -->
+    <!-- TESTIMONIAL WALI MURID -->
     <section class="py-16 bg-white border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -206,79 +223,67 @@
             </div>
             
             <div class="columns-1 md:columns-2 lg:columns-2 gap-6 space-y-6">
-                <!-- Ortu 1 -->
+                <!-- Data Testimoni -->
                 <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 break-inside-avoid shadow-sm hover:shadow-md transition">
                     <div class="text-yellow-400 text-sm mb-2">★★★★★</div>
                     <p class="text-slate-700 text-sm italic mb-3">"Assalamualaikum ibu, alhamdulillah arshaka semenjak les di bimbel top pangkalan banyak banget perubahannya dari yg belum bisa nul... Iya ibu alhamdulillah baru 4 bulan udah jilid 2, berkat ibu guru semua yg telaten dan sabar ngajarinnya 🙏"</p>
                     <p class="font-bold text-slate-800 text-sm">- Mm Arsyaka</p>
                 </div>
-                <!-- Ortu 2 -->
                 <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 break-inside-avoid shadow-sm hover:shadow-md transition">
                     <div class="text-yellow-400 text-sm mb-2">★★★★★</div>
                     <p class="text-slate-700 text-sm italic mb-3">"Alhamdulillah, Adit les di bimbel top pangkalan  jangka waktu sebulan tos rengse jilid 3, hatur nuhun bimbel top pangkalan semoga sukses terus 🤲🤲"</p>
                     <p class="font-bold text-slate-800 text-sm">- Mamah Adit Susukan</p>
                 </div>
-                <!-- Ortu 3 -->
                 <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 break-inside-avoid shadow-sm hover:shadow-md transition">
                     <div class="text-yellow-400 text-sm mb-2">★★★★★</div>
                     <p class="text-slate-700 text-sm italic mb-3">"Walaikumsalam baik Bu🥰iya Bu Alhamdulillah berkat les di ibu 3 bulan sudah bisa membaca dan menulis Bu 🥰dan Alhamdulillah di TK pun dpt peringkat pertama terbaik Bu...di SD pun Alhamdulillah masuk 3 besar Bu"</p>
                     <p class="font-bold text-slate-800 text-sm">- Mm Dina</p>
                 </div>
-                <!-- Ortu 4 -->
                 <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 break-inside-avoid shadow-sm hover:shadow-md transition">
                     <div class="text-yellow-400 text-sm mb-2">★★★★★</div>
                     <p class="text-slate-700 text-sm italic mb-3">"Assalamualaikum,AlhamdulillahnBu Firna selama ikut les calistung udah bnyk perkembangan nya,mulai dri hurup Vokal yang tadinya blum hpal semenjak kes udah hpl dan bacanya juga udah lumayan lancar.terimakasih Bu Guru yang sudah sabar mendidik Firna sampe sekarang,mudah2an Ibu Guru les semua di beri kesehatan,umur panjang dan banyak rezeqi🤲"</p>
                     <p class="font-bold text-slate-800 text-sm">- Mm Firna</p>
                 </div>
-                <!-- Ortu 5 -->
                 <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 break-inside-avoid shadow-sm hover:shadow-md transition">
                     <div class="text-yellow-400 text-sm mb-2">★★★★★</div>
                     <p class="text-slate-700 text-sm italic mb-3">"Assalamualaikum.. Alhamdulillah, indah nurhayati setelah ikut bimbel prisma ada peningkatan dalam berhitung. Di prisma pembelajaran nya asik. Santai. Menyenangkan dan sangat puas."</p>
                     <p class="font-bold text-slate-800 text-sm">- Mamah Indahh</p>
                 </div>
-                <!-- Ortu 6 -->
                 <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 break-inside-avoid shadow-sm hover:shadow-md transition">
                     <div class="text-yellow-400 text-sm mb-2">★★★★★</div>
                     <p class="text-slate-700 text-sm italic mb-3">"Alhamdulillah anak saya ada peningkatan belajar baca y sejak les disini , lebih cepet memahami kalo ada PR dikte dari sekolah .. masalah biaya juga cukup terjangkau 🤭 mksh ibu2 guru sudah sabar ngajarin anak saya 🙏🥰"</p>
                     <p class="font-bold text-slate-800 text-sm">- Bunda / Mamah (+62 812-1495-...)</p>
                 </div>
-                <!-- Ortu 7 -->
                 <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 break-inside-avoid shadow-sm hover:shadow-md transition">
                     <div class="text-yellow-400 text-sm mb-2">★★★★★</div>
                     <p class="text-slate-700 text-sm italic mb-3">"Perkembangan anak setelah ikutan bimbel,sebelumya sama sekali belum mengenal huruf belajar dari dasar lalu mengenal huruf,angka sampai bisa membaca terimakasih top bimbel pangkalan sudah mengajari dan berpores dari materi dasar sampai sekarang sudah bisa membaca di Ama jilid 2🥰"</p>
                     <p class="font-bold text-slate-800 text-sm">- Mm Fauziah</p>
                 </div>
-                <!-- Ortu 8 -->
                 <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 break-inside-avoid shadow-sm hover:shadow-md transition">
                     <div class="text-yellow-400 text-sm mb-2">★★★★★</div>
                     <p class="text-slate-700 text-sm italic mb-3">"Berhitung ya juga makin lancar bu, alhamdulillah rekomendasi dari ibu guru di TK emang gk salah merekomendasi'in les ke tempat ibu"</p>
                     <p class="font-bold text-slate-800 text-sm">- Mm Berkah Rizki...</p>
                 </div>
-                <!-- Ortu 9 -->
                 <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 break-inside-avoid shadow-sm hover:shadow-md transition">
                     <div class="text-yellow-400 text-sm mb-2">★★★★★</div>
                     <p class="text-slate-700 text-sm italic mb-3">"Assalamualikum, alhamdulillah rizki semenjak les di tmpat ibu sudah bayak kemajuan ya, apalagi membaja ya sudah makin lancar,"</p>
                     <p class="font-bold text-slate-800 text-sm">- Mamah Rizki</p>
                 </div>
-                <!-- Ortu 10 -->
                 <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 break-inside-avoid shadow-sm hover:shadow-md transition">
                     <div class="text-yellow-400 text-sm mb-2">★★★★★</div>
                     <p class="text-slate-700 text-sm italic mb-3">"Assalamualikum.ibu nie dengan mmh nya Afifah ailya Alhamdulillah Bu Afifah baru juga berapa bulan udah ada perkembangan baca . Berhitung . Sama dikte makasih atas bimbingan nya 🙏"</p>
                     <p class="font-bold text-slate-800 text-sm">- Mm AFifa Mekars...</p>
                 </div>
-                <!-- Ortu 11 -->
                 <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 break-inside-avoid shadow-sm hover:shadow-md transition">
                     <div class="text-yellow-400 text-sm mb-2">★★★★★</div>
                     <p class="text-slate-700 text-sm italic mb-3">"Alhmdulillah Alip skerang sudah terlihat ada perkembangan ibu walpun baru tapi Alhamdulillah sedkit sedikit sudah mau menulis dan semnagt kalau mau les ibu terima kasih untuk ibu dan ibu guru yang lain sudah mau membimbing Alif mhon maaf juga jika Alif masih belum pokus ya Bu neda di hapunten 🙏🙏"</p>
                     <p class="font-bold text-slate-800 text-sm">- Mamah Alif / Alip</p>
                 </div>
-                <!-- Ortu 12 -->
                 <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 break-inside-avoid shadow-sm hover:shadow-md transition">
                     <div class="text-yellow-400 text-sm mb-2">★★★★★</div>
                     <p class="text-slate-700 text-sm italic mb-3">"Assalamualaikum bu Nie mmh nya qiana khaira nabila(lala) Alhamdulillah udh 4bulan setengah udh bisa baca 2 huruf udh hafal A sampe Z berhitung 1 sampai 15."</p>
                     <p class="font-bold text-slate-800 text-sm">- Mamah Qiana Khaira Nabila / Lala</p>
                 </div>
-                <!-- Ortu 13 -->
                 <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 break-inside-avoid shadow-sm hover:shadow-md transition">
                     <div class="text-yellow-400 text-sm mb-2">★★★★★</div>
                     <p class="text-slate-700 text-sm italic mb-3">"saya orang tua dari muhammad zidhan pratama benar² puas bu les di top prisma tdinya gabisa nulis skrg jdi bisa tulis cepat padahal baru masuk"</p>
@@ -297,11 +302,9 @@
             </p>
             
             <div class="bg-white text-slate-800 rounded-3xl p-8 md:p-12 shadow-2xl max-w-4xl mx-auto relative overflow-hidden transform hover:scale-105 transition duration-500">
-                <!-- Ribbon -->
                 <div class="absolute top-0 right-0 bg-red-600 text-white font-bold py-2 px-12 transform translate-x-10 translate-y-6 rotate-45 shadow-md z-10 text-lg">
                     PROMO TERBATAS!
                 </div>
-
                 <h3 class="text-2xl md:text-3xl font-bold mb-4 text-slate-700">Tapi Tenang...</h3>
                 <p class="text-xl text-slate-600 mb-8">Semua fasilitas luar biasa ini bisa Bapak/Ibu dapatkan <span class="font-bold text-orange-600 border-b-2 border-orange-400">HANYA DENGAN:</span></p>
                 
@@ -319,8 +322,6 @@
 
                 <div class="bg-red-50 border border-red-200 rounded-xl p-6 mb-8">
                     <p class="text-red-700 font-bold text-lg mb-4">⚠️ PERHATIAN: Promo Subsidi Ini HANYA DIBUKA UNTUK 5 MITRA PERTAMA bulan ini demi menjaga eksklusivitas wilayah!</p>
-                    
-                    <!-- COUNTDOWN TIMER & PROGRESS BAR DENGAN "HARI" -->
                     <div class="flex flex-col items-center justify-center mt-6">
                         <p class="text-slate-800 font-bold mb-3">Promo Berakhir Dalam:</p>
                         <div class="flex gap-2 md:gap-4 text-center justify-center">
@@ -342,7 +343,6 @@
                             </div>
                         </div>
                         
-                        <!-- KUOTA REAL 0/5 -->
                         <div class="mt-8 w-full max-w-md">
                             <div class="flex justify-between text-sm md:text-base font-bold text-slate-700 mb-2">
                                 <span>Kuota Terpakai: 0</span>
@@ -355,15 +355,15 @@
                     </div>
                 </div>
 
-                <a href="#fomo-section" class="block w-full md:w-auto md:inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-5 px-12 rounded-full shadow-lg hover:shadow-orange-500/50 transition duration-300 text-2xl animate-pulse">
+                <a href="#penawaran" class="block w-full md:w-auto md:inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-5 px-12 rounded-full shadow-lg hover:shadow-orange-500/50 transition duration-300 text-2xl animate-pulse">
                     Lihat Apa Saja yang Anda Dapatkan
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- THE OFFER SECTION (FASILITAS DIPINDAH KE SINI) -->
-    <section id="fomo-section" class="py-20 bg-blue-900 text-white relative">
+    <!-- THE OFFER SECTION (KOTAK FASILITAS DENGAN FUNGSI POPUP KLIK) -->
+    <section id="penawaran" class="py-20 bg-blue-900 text-white relative">
         <div class="absolute inset-0 bg-blue-955 opacity-50"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16">
@@ -376,67 +376,67 @@
 
             <div class="bg-white text-slate-800 rounded-3xl p-6 md:p-12 shadow-2xl relative overflow-hidden">
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <!-- BUKU MODUL -->
-                <div onclick="openModal('Hak Paten Metode AMA & Modul', 'Lisensi kurikulum Anak Mahir Membaca terdaftar HAKI. Terbukti anak cepat membaca tanpa stres. Modul disusun secara sistematis agar mudah dipahami anak usia dini maupun tutor baru.', 'https://i.postimg.cc/Y0SYjFLR/studio-render-3-(1).jpg')" class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition group flex flex-col cursor-pointer">
-                    <img src="https://i.postimg.cc/Y0SYjFLR/studio-render-3-(1).jpg" alt="Buku Modul AMA" class="w-full h-36 object-cover group-hover:scale-105 transition duration-500">
-                    <div class="p-5 flex-grow">
-                        <h4 class="font-bold text-blue-800 mb-2 leading-tight">Hak Paten "Metode AMA" & Modul 🔍</h4>
-                        <p class="text-slate-600 text-sm">Lisensi kurikulum Anak Mahir Membaca terdaftar HAKI. Terbukti anak cepat membaca tanpa stres. <span class="text-orange-500 font-semibold block mt-1">(Klik untuk lihat detail)</span></p>
+                    
+                    <!-- BUKU MODUL -->
+                    <div onclick="openModal('Hak Paten Metode AMA & Modul', 'Lisensi kurikulum Anak Mahir Membaca terdaftar HAKI. Terbukti anak cepat membaca tanpa stres. Modul disusun secara sistematis agar mudah dipahami anak usia dini maupun tutor baru.', 'https://i.postimg.cc/Y0SYjFLR/studio-render-3-(1).jpg')" class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition group flex flex-col cursor-pointer">
+                        <img src="https://i.postimg.cc/Y0SYjFLR/studio-render-3-(1).jpg" alt="Buku Modul AMA" class="w-full h-36 object-cover group-hover:scale-105 transition duration-500">
+                        <div class="p-5 flex-grow">
+                            <h4 class="font-bold text-blue-800 mb-2 leading-tight">Hak Paten "Metode AMA" & Modul 🔍</h4>
+                            <p class="text-slate-600 text-sm">Lisensi kurikulum Anak Mahir Membaca terdaftar HAKI. Terbukti anak cepat membaca tanpa stres. <span class="text-orange-500 font-semibold block mt-1">(Klik untuk lihat detail)</span></p>
+                        </div>
                     </div>
-                </div>
 
-                <!-- DASHBOARD KEUANGAN -->
-                <div onclick="openModal('Sistem Manajemen Bisnis (ERP)', 'Kelola input siswa, transaksi pembayaran/SPP, jadwal mengajar, hitung payroll & bonus guru, hingga laporan keuangan bulanan secara otomatis dari satu aplikasi web terpusat!', 'https://i.postimg.cc/PqSv8xbp/screen11.jpg')" class="bg-orange-50 rounded-2xl border border-orange-200 overflow-hidden shadow-sm hover:shadow-xl transition group flex flex-col cursor-pointer">
-                    <img src="https://i.postimg.cc/PqSv8xbp/screen11.jpg" alt="Dashboard Operasional" class="w-full h-36 object-cover group-hover:scale-105 transition duration-500">
-                    <div class="p-5 flex-grow">
-                        <h4 class="font-bold text-orange-700 mb-2 leading-tight">Sistem Manajemen Bisnis (ERP) 🔍</h4>
-                        <p class="text-slate-700 text-sm">Kelola input siswa, transaksi pembayaran/SPP, jadwal mengajar, hitung <i>payroll</i> & bonus guru, hingga laporan keuangan! <span class="text-orange-600 font-semibold block mt-1">(Klik untuk lihat detail)</span></p>
+                    <!-- DASHBOARD KEUANGAN -->
+                    <div onclick="openModal('Sistem Manajemen Bisnis (ERP)', 'Kelola input siswa, transaksi pembayaran/SPP, jadwal mengajar, hitung payroll & bonus guru, hingga laporan keuangan bulanan secara otomatis dari satu aplikasi web terpusat!', 'https://i.postimg.cc/PqSv8xbp/screen11.jpg')" class="bg-orange-50 rounded-2xl border border-orange-200 overflow-hidden shadow-sm hover:shadow-xl transition group flex flex-col cursor-pointer">
+                        <img src="https://i.postimg.cc/PqSv8xbp/screen11.jpg" alt="Dashboard Operasional" class="w-full h-36 object-cover group-hover:scale-105 transition duration-500">
+                        <div class="p-5 flex-grow">
+                            <h4 class="font-bold text-orange-700 mb-2 leading-tight">Sistem Manajemen Bisnis (ERP) 🔍</h4>
+                            <p class="text-slate-700 text-sm">Kelola input siswa, transaksi pembayaran/SPP, jadwal mengajar, hitung <i>payroll</i> & bonus guru, hingga laporan keuangan! <span class="text-orange-600 font-semibold block mt-1">(Klik untuk lihat detail)</span></p>
+                        </div>
                     </div>
-                </div>
-                
-                <!-- PORTAL ORANG TUA -->
-                <div onclick="openModal('Web Portal Orang Tua Premium', 'Wali murid memiliki akun login mandiri untuk memantau nilai, jadwal belajar, dan evaluasi harian anak secara real-time. Meningkatkan kepercayaan orang tua terhadap cabang Anda.', 'https://i.postimg.cc/85kdq94Z/screen1fdsa1.jpg')" class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition group flex flex-col cursor-pointer">
-                    <img src="https://i.postimg.cc/85kdq94Z/screen1fdsa1.jpg" alt="Portal Orang Tua" class="w-full h-36 object-cover group-hover:scale-105 transition duration-500">
-                    <div class="p-5 flex-grow">
-                        <h4 class="font-bold text-blue-600 mb-2 leading-tight">Web Portal Orang Tua Premium 🔍</h4>
-                        <p class="text-slate-600 text-sm">Wali murid memiliki akun <i>login</i> mandiri untuk memantau nilai, jadwal belajar, dan evaluasi harian anak. <span class="text-orange-500 font-semibold block mt-1">(Klik untuk lihat detail)</span></p>
+                    
+                    <!-- PORTAL ORANG TUA -->
+                    <div onclick="openModal('Web Portal Orang Tua Premium', 'Wali murid memiliki akun login mandiri untuk memantau nilai, jadwal belajar, dan evaluasi harian anak secara real-time. Meningkatkan kepercayaan orang tua terhadap cabang Anda.', 'https://i.postimg.cc/85kdq94Z/screen1fdsa1.jpg')" class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition group flex flex-col cursor-pointer">
+                        <img src="https://i.postimg.cc/85kdq94Z/screen1fdsa1.jpg" alt="Portal Orang Tua" class="w-full h-36 object-cover group-hover:scale-105 transition duration-500">
+                        <div class="p-5 flex-grow">
+                            <h4 class="font-bold text-blue-600 mb-2 leading-tight">Web Portal Orang Tua Premium 🔍</h4>
+                            <p class="text-slate-600 text-sm">Wali murid memiliki akun <i>login</i> mandiri untuk memantau nilai, jadwal belajar, dan evaluasi harian anak. <span class="text-orange-500 font-semibold block mt-1">(Klik untuk lihat detail)</span></p>
+                        </div>
                     </div>
-                </div>
 
-                <!-- STARTER KIT -->
-                <div onclick="openModal('Starter Kit Fisik (Siap Buka!)', 'GRATIS cetakan fisik Buku Modul untuk 10 siswa pertama beserta Banner Spanduk besar siap pasang di lokasi Anda agar langsung menarik perhatian warga sekitar.', 'https://i.postimg.cc/cCdTh6gc/studio-render-1-(11).jpg')" class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition group flex flex-col cursor-pointer">
-                    <img src="https://i.postimg.cc/cCdTh6gc/studio-render-1-(11).jpg" alt="Starter Kit" class="w-full h-36 object-cover group-hover:scale-105 transition duration-500">
-                    <div class="p-5 flex-grow">
-                        <h4 class="font-bold text-emerald-700 mb-2 leading-tight">Starter Kit Fisik (Siap Buka!) 🔍</h4>
-                        <p class="text-slate-600 text-sm">GRATIS cetakan fisik Buku Modul untuk 10 siswa pertama beserta Banner Spanduk besar siap pasang. <span class="text-orange-500 font-semibold block mt-1">(Klik untuk lihat detail)</span></p>
+                    <!-- STARTER KIT -->
+                    <div onclick="openModal('Starter Kit Fisik (Siap Buka!)', 'GRATIS cetakan fisik Buku Modul untuk 10 siswa pertama beserta Banner Spanduk besar siap pasang di lokasi Anda agar langsung menarik perhatian warga sekitar.', 'https://i.postimg.cc/cCdTh6gc/studio-render-1-(11).jpg')" class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition group flex flex-col cursor-pointer">
+                        <img src="https://i.postimg.cc/cCdTh6gc/studio-render-1-(11).jpg" alt="Starter Kit" class="w-full h-36 object-cover group-hover:scale-105 transition duration-500">
+                        <div class="p-5 flex-grow">
+                            <h4 class="font-bold text-emerald-700 mb-2 leading-tight">Starter Kit Fisik (Siap Buka!) 🔍</h4>
+                            <p class="text-slate-600 text-sm">GRATIS cetakan fisik Buku Modul untuk 10 siswa pertama beserta Banner Spanduk besar siap pasang. <span class="text-orange-500 font-semibold block mt-1">(Klik untuk lihat detail)</span></p>
+                        </div>
                     </div>
-                </div>
 
-                <!-- ILUSTRASI TRAINING GURU -->
-                <div onclick="openModal('Pelatihan Tutor & SOP Lengkap', 'Panduan rekrutmen siap pakai. Kami bimbing tutor Anda menguasai Metode AMA sampai mahir mengajar di kelas dengan standar kualitas yang sama di setiap cabang.', 'https://i.postimg.cc/mDWN8h14/studio-render-2-(2).jpg')" class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition group flex flex-col cursor-pointer">
-                    <img src="https://i.postimg.cc/mDWN8h14/studio-render-2-(2).jpg" alt="Training" class="w-full h-36 object-cover group-hover:scale-105 transition duration-500">
-                    <div class="p-5 flex-grow">
-                        <h4 class="font-bold text-purple-700 mb-2 leading-tight">Pelatihan Tutor & SOP Lengkap 🔍</h4>
-                        <p class="text-slate-600 text-sm">Panduan rekrutmen siap pakai. Kami bimbing tutor Anda menguasai Metode AMA sampai mahir mengajar. <span class="text-orange-500 font-semibold block mt-1">(Klik untuk lihat detail)</span></p>
+                    <!-- ILUSTRASI TRAINING GURU -->
+                    <div onclick="openModal('Pelatihan Tutor & SOP Lengkap', 'Panduan rekrutmen siap pakai. Kami bimbing tutor Anda menguasai Metode AMA sampai mahir mengajar di kelas dengan standar kualitas yang sama di setiap cabang.', 'https://i.postimg.cc/mDWN8h14/studio-render-2-(2).jpg')" class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition group flex flex-col cursor-pointer">
+                        <img src="https://i.postimg.cc/mDWN8h14/studio-render-2-(2).jpg" alt="Training" class="w-full h-36 object-cover group-hover:scale-105 transition duration-500">
+                        <div class="p-5 flex-grow">
+                            <h4 class="font-bold text-purple-700 mb-2 leading-tight">Pelatihan Tutor & SOP Lengkap 🔍</h4>
+                            <p class="text-slate-600 text-sm">Panduan rekrutmen siap pakai. Kami bimbing tutor Anda menguasai Metode AMA sampai mahir mengajar. <span class="text-orange-500 font-semibold block mt-1">(Klik untuk lihat detail)</span></p>
+                        </div>
                     </div>
-                </div>
 
-                <!-- STRATEGI MARKETING -->
-                <div onclick="openModal('Blueprint Strategi Marketing', 'Rahasia optimasi iklan digital dan copywriting promosi yang terbukti ampuh mendatangkan pendaftaran siswa baru secara konsisten ke cabang Anda.', 'https://i.postimg.cc/W1J5nBYr/studio-render-4-(4).jpg')" class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition group flex flex-col cursor-pointer">
-                    <img src="https://i.postimg.cc/W1J5nBYr/studio-render-4-(4).jpg" alt="Marketing" class="w-full h-36 object-cover group-hover:scale-105 transition duration-500">
-                    <div class="p-5 flex-grow">
-                        <h4 class="font-bold text-red-600 mb-2 leading-tight">Blueprint Strategi Marketing 🔍</h4>
-                        <p class="text-slate-600 text-sm">Rahasia optimasi iklan digital dan *copywriting* promosi yang terbukti ampuh mendatangkan siswa baru. <span class="text-orange-500 font-semibold block mt-1">(Klik untuk lihat detail)</span></p>
+                    <!-- STRATEGI MARKETING -->
+                    <div onclick="openModal('Blueprint Strategi Marketing', 'Rahasia optimasi iklan digital dan copywriting promosi yang terbukti ampuh mendatangkan pendaftaran siswa baru secara konsisten ke cabang Anda.', 'https://i.postimg.cc/W1J5nBYr/studio-render-4-(4).jpg')" class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition group flex flex-col cursor-pointer">
+                        <img src="https://i.postimg.cc/W1J5nBYr/studio-render-4-(4).jpg" alt="Marketing" class="w-full h-36 object-cover group-hover:scale-105 transition duration-500">
+                        <div class="p-5 flex-grow">
+                            <h4 class="font-bold text-red-600 mb-2 leading-tight">Blueprint Strategi Marketing 🔍</h4>
+                            <p class="text-slate-600 text-sm">Rahasia optimasi iklan digital dan *copywriting* promosi yang terbukti ampuh mendatangkan siswa baru. <span class="text-orange-500 font-semibold block mt-1">(Klik untuk lihat detail)</span></p>
+                        </div>
                     </div>
-                </div>
 
-            </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- PANEL FOMO / URGENSI BARU DITAMBAHKAN DI SINI -->
+    <!-- URGENSI -->
     <section class="py-16 bg-red-700 text-white text-center relative overflow-hidden">
         <div class="absolute inset-0 bg-black/10"></div>
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -444,219 +444,64 @@
             <p class="text-xl md:text-2xl text-red-100 mb-8 font-light leading-relaxed">
                 Ingat, kami secara ketat menerapkan <strong class="text-white">Sistem Eksklusivitas Wilayah</strong>. Jika hari ini ada orang lain di kecamatan/daerah Anda yang mengamankan lisensi ini lebih dulu, maka <strong class="text-yellow-300">peluang Anda untuk membuka cabang di lokasi tersebut akan tertutup selamanya!</strong>
             </p>
-            <div class="bg-black/30 p-6 md:p-8 rounded-3xl border border-red-500/50 mb-10 inline-block text-left shadow-2xl backdrop-blur-sm">
-                <p class="text-lg md:text-xl text-red-50 flex items-start gap-4">
-                    <span class="text-3xl md:text-4xl">⚠️</span>
-                    <span>Jangan biarkan kompetitor atau bahkan tetangga Anda yang lebih dulu menikmati <strong>keuntungan jutaan rupiah setiap bulan</strong> dari pasar potensial yang seharusnya menjadi milik Anda.</span>
-                </p>
-            </div>
-            <br>
             <a href="https://wa.me/6289699859149?text=Halo%20Admin,%20saya%20ingin%20mengamankan%20kuota%20Kemitraan%20Bimbel%20Metode%20AMA%20sebelum%20keduluan%20yang%20lain." target="_blank" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-red-900 font-black py-5 px-10 md:px-16 rounded-full shadow-[0_0_30px_rgba(250,204,21,0.6)] hover:shadow-[0_0_40px_rgba(250,204,21,0.8)] transition duration-300 text-xl md:text-2xl transform hover:-translate-y-1 animate-bounce">
                 Kunci Wilayah Saya Sekarang!
             </a>
         </div>
     </section>
 
-    <!-- LEAD MAGNET / BONUS EBOOK & FORM SECTION -->
-    <section class="py-16 bg-slate-800 text-white relative">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <!-- Visual / Penawaran Bonus -->
-                <div>
-                    <span class="inline-block py-1 px-3 rounded-full bg-yellow-500/20 text-yellow-400 font-semibold text-sm mb-4 border border-yellow-500/30">
-                        🎁 BONUS SPESIAL PENGUNJUNG
-                    </span>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Belum Siap Bergabung Hari Ini?</h2>
-                    <p class="text-slate-300 mb-6 text-lg">
-                        Tidak masalah! Khusus untuk Anda yang sudah membaca sampai sini, kami berikan <strong>E-Book Gratis "Rahasia 90% Bimbel Sukses di Tahun Pertama"</strong> beserta Proposal Lengkap Kemitraan.
-                    </p>
-                    <div class="bg-white/10 p-4 rounded-xl border border-white/20 flex gap-4">
-                        <img src="https://placehold.co/100x140/f97316/ffffff?text=COVER+EBOOK" alt="Ebook Cover" class="rounded shadow-md w-24 h-auto">
-                        <div>
-                            <h4 class="font-bold text-yellow-400">Gratis E-Book & Proposal</h4>
-                            <p class="text-sm text-slate-300 mt-1">Isi formulir di samping, dan kami akan langsung mengirimkan file PDF-nya ke WhatsApp Anda secara otomatis.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Formulir Lead Magnet -->
-                <div class="bg-white text-slate-800 rounded-2xl p-6 md:p-8 shadow-xl">
-                    <h3 class="text-2xl font-bold mb-2">Klaim E-Book & Proposal Anda</h3>
-                    <p class="text-slate-500 text-sm mb-6">Silakan lengkapi data berikut. Tim kami akan merespons melalui WA Anda.</p>
-                    
-                    <form id="leadForm" onsubmit="sendToWA(event)" class="space-y-4">
-                        <div>
-                            <label class="block text-sm font-semibold text-slate-700 mb-1">Nama Lengkap *</label>
-                            <input type="text" id="nama" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition" placeholder="Contoh: Budi Santoso">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-semibold text-slate-700 mb-1">Nomor WhatsApp *</label>
-                            <input type="tel" id="nomorWA" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition" placeholder="Contoh: 0812xxxxxx">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-semibold text-slate-700 mb-1">Kota / Domisili Asal *</label>
-                            <input type="text" id="kota" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition" placeholder="Contoh: Bandung">
-                        </div>
-                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg shadow transition duration-300 flex items-center justify-center gap-2 mt-2">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.898-4.45 9.898-9.898 0-5.452-4.445-9.897-9.896-9.897-5.45 0-9.898 4.445-9.898 9.897 0 2.066.638 3.84 1.706 5.405l-1.055 3.856 3.853-1.055zm8.136-11.161c-.302-.605-1.127-.605-1.429 0l-1.042 2.083c-.152.303-.518.437-.827.303l-1.472-.638c-1.782-.774-3.149-2.14-3.923-3.923l-.638-1.472c-.134-.309 0-.675.303-.827l2.083-1.042c.605-.302.605-1.127 0-1.429l-1.849-.924c-.605-.303-1.378-.051-1.68.555l-1.082 2.164c-.655 1.309-.344 2.871.748 3.874l4.238 3.901c1.003 1.092 2.565 1.403 3.874.748l2.164-1.082c.606-.302.858-1.075.555-1.68l-.924-1.849z"/></svg>
-                            Kirimkan ke WhatsApp Saya
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section class="py-16 bg-slate-100 pb-32 md:pb-16">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 class="text-3xl font-bold text-center text-slate-800 mb-10">Pertanyaan yang Sering Diajukan (FAQ)</h3>
-            <div class="space-y-4">
-                <div class="border border-slate-200 rounded-xl p-5 bg-white hover:border-orange-300 transition shadow-sm">
-                    <h4 class="font-bold text-slate-800 mb-2 text-lg">1. Apakah saya harus punya pengalaman mengajar?</h4>
-                    <p class="text-slate-600">Tidak perlu. Anda bisa berperan murni sebagai pemilik bisnis (investor) dan merekrut pengajar. Kami sudah menyiapkan SOP rekrutmen dan akan melatih tutor cabang Anda.</p>
-                </div>
-                <div class="border border-slate-200 rounded-xl p-5 bg-white hover:border-orange-300 transition shadow-sm">
-                    <h4 class="font-bold text-slate-800 mb-2 text-lg">2. Apakah ada biaya perpanjangan tahunan atau royalti?</h4>
-                    <p class="text-slate-600">Tidak ada! Harga promo Rp 3,9 Juta ini adalah biaya lisensi kemitraan sekali bayar untuk seumur hidup. 100% keuntungan bulanan milik Anda tanpa potongan royalti ke pusat.</p>
-                </div>
-                <div class="border border-slate-200 rounded-xl p-5 bg-white hover:border-orange-300 transition shadow-sm">
-                    <h4 class="font-bold text-slate-800 mb-2 text-lg">3. Apakah aplikasinya sulit digunakan untuk pemula?</h4>
-                    <p class="text-slate-600">Sama sekali tidak. Aplikasi ERP (Manajemen) dan Portal Orang Tua kami rancang semudah menggunakan aplikasi media sosial. Sangat <i>user-friendly</i> meskipun Anda gaptek.</p>
-                </div>
-                <div class="border border-slate-200 rounded-xl p-5 bg-white hover:border-orange-300 transition shadow-sm">
-                    <h4 class="font-bold text-slate-800 mb-2 text-lg">4. Bagaimana jika saya belum punya sewa tempat/ruko?</h4>
-                    <p class="text-slate-600">Tidak masalah! Anda bisa memulai dari garasi rumah, ruang tamu, atau menyewa tempat kecil terlebih dahulu. Metode AMA sangat fleksibel dan tidak membutuhkan ruangan yang luas di tahap awal.</p>
-                </div>
-                <div class="border border-slate-200 rounded-xl p-5 bg-white hover:border-orange-300 transition shadow-sm">
-                    <h4 class="font-bold text-slate-800 mb-2 text-lg">5. Apakah buku modul bisa dipesan ulang jika murid bertambah?</h4>
-                    <p class="text-slate-600">Tentu saja! Setelah Starter Kit untuk 10 siswa gratis Anda habis, Anda bisa memesan buku modul fisik tambahan langsung melalui sistem pusat kami dengan harga khusus mitra yang sangat terjangkau.</p>
-                </div>
-                <div class="border border-slate-200 rounded-xl p-5 bg-white hover:border-orange-300 transition shadow-sm">
-                    <h4 class="font-bold text-slate-800 mb-2 text-lg">6. Berapa lama waktu yang dibutuhkan sampai cabang saya buka?</h4>
-                    <p class="text-slate-600">Sangat cepat! Setelah pembayaran dikonfirmasi, Anda akan langsung mendapat akses ke aplikasi web, materi training digital, dan starter kit fisik akan dikirimkan. Biasanya dalam 3-7 hari cabang Anda sudah siap jalan.</p>
-                </div>
-                <div class="border border-slate-200 rounded-xl p-5 bg-white hover:border-orange-300 transition shadow-sm">
-                    <h4 class="font-bold text-slate-800 mb-2 text-lg">7. Apakah ada perlindungan eksklusivitas wilayah?</h4>
-                    <p class="text-slate-600">Ya, kami sangat menjaga eksklusivitas. Kami menerapkan pembatasan jarak radius antarcabang agar sesama mitra Metode AMA tidak saling berebut siswa di lokasi yang berdekatan.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- FOOTER DENGAN SOSIAL MEDIA -->
-    <footer class="bg-slate-900 text-slate-400 py-12 mt-10 relative z-10">
+    <footer class="bg-slate-900 text-slate-400 py-12 relative z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-8">
-            
-            <!-- Kolom 1: Info Bimbel -->
             <div class="text-center md:text-left">
-                <span class="font-extrabold text-3xl text-white tracking-tight">Bimbel <span class="text-orange-500">AMA</span></span>
+                <span class="font-extrabold text-3xl text-white tracking-tight">Bimbel <span class="text-orange-500">Metode AMA</span></span>
                 <p class="mt-2 text-sm text-slate-400 max-w-xs mx-auto md:mx-0">Pusat Bimbingan Belajar Calistung Terbaik. Anak Mahir Membaca tanpa mengeja.</p>
             </div>
 
-            <!-- Kolom 2: Ikon Sosial Media -->
             <div class="flex items-center space-x-6">
-                <!-- Instagram -->
                 <a href="https://www.instagram.com/amaakumahirbaca?stkn=eGE3OWYzbHZkMHd1" target="_blank" title="Instagram Bimbel AMA" class="text-slate-400 hover:text-pink-500 transition transform hover:scale-110">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                 </a>
-                <!-- TikTok -->
                 <a href="https://www.tiktok.com/@aku.mahir.baca.am?_r=1&_t=ZS-99XHrWfdXxR" target="_blank" title="TikTok Bimbel AMA" class="text-slate-400 hover:text-white transition transform hover:scale-110">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
                 </a>
-                <!-- YouTube -->
                 <a href="https://youtube.com/shorts/8wR3OcjL2Yo?si=191sTHhr7NYrOMKb" target="_blank" title="YouTube Bimbel AMA" class="text-slate-400 hover:text-red-500 transition transform hover:scale-110">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                 </a>
             </div>
 
-            <!-- Kolom 3: Link Tambahan -->
             <div class="text-center md:text-right">
-                <a href="kemitraan.html" class="text-slate-300 hover:text-orange-400 transition text-sm font-semibold border-b border-slate-700 hover:border-orange-500 pb-1">Pelajari Peluang Kemitraan</a>
+                <a href="index.html" class="text-slate-300 hover:text-orange-400 transition text-sm font-semibold border-b border-slate-700 hover:border-orange-500 pb-1">Kembali ke Beranda Utama</a>
             </div>
         </div>
-        
-        <!-- Copyright & Padding Khusus Mobile (agar tidak tertutup tombol WA melayang) -->
         <div class="text-center mt-10 border-t border-slate-800 pt-6 text-sm text-slate-500 pb-24 md:pb-4">
             &copy; 2026 Kemitraan Bimbel Calistung Metode AMA. All rights reserved.
         </div>
     </footer>
 
-    <!-- FLOATING WHATSAPP BUTTON (ALL DEVICES) -->
+    <!-- AUDIO PLAYER -->
+    <audio id="bg-music" loop>
+        <source src="Aku_Mahir_Baca.mp3" type="audio/mpeg">
+    </audio>
+    <button id="music-toggle" class="fixed bottom-24 right-6 md:bottom-6 md:right-auto md:left-6 z-50 bg-white/90 backdrop-blur border border-slate-200 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group flex items-center justify-center h-12 w-12 focus:outline-none">
+        <svg id="icon-muted" class="w-6 h-6 text-slate-500 group-hover:text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"></path></svg>
+        <svg id="icon-playing" class="w-6 h-6 text-orange-500 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+    </button>
+
+    <!-- FLOATING WA -->
     <div class="fixed bottom-0 left-0 right-0 p-4 bg-white/90 backdrop-blur border-t border-slate-200 md:bg-transparent md:backdrop-blur-none md:border-none md:bottom-6 md:right-6 md:left-auto md:p-0 z-50 flex justify-center shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] md:shadow-none">
-        <a href="https://wa.me/6289699859149?text=Saya%20berminat%20mengikuti%20kemitraan%20Bimbel%20Calistung%20Metode%20AMA" target="_blank" class="w-full md:w-auto bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-xl md:rounded-full shadow-2xl flex items-center justify-center gap-2 animate-bounce hover:animate-none transition-all duration-300 border-2 border-white">
+        <a href="https://wa.me/6289699859149?text=Saya%20berminat%20mengikuti%20kemitraan%20Bimbel%20Metode%20AMA" target="_blank" class="w-full md:w-auto bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-xl md:rounded-full shadow-2xl flex items-center justify-center gap-2 animate-bounce hover:animate-none transition-all duration-300 border-2 border-white">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.898-4.45 9.898-9.898 0-5.452-4.445-9.897-9.896-9.897-5.45 0-9.898 4.445-9.898 9.897 0 2.066.638 3.84 1.706 5.405l-1.055 3.856 3.853-1.055zm8.136-11.161c-.302-.605-1.127-.605-1.429 0l-1.042 2.083c-.152.303-.518.437-.827.303l-1.472-.638c-1.782-.774-3.149-2.14-3.923-3.923l-.638-1.472c-.134-.309 0-.675.303-.827l2.083-1.042c.605-.302.605-1.127 0-1.429l-1.849-.924c-.605-.303-1.378-.051-1.68.555l-1.082 2.164c-.655 1.309-.344 2.871.748 3.874l4.238 3.901c1.003 1.092 2.565 1.403 3.874.748l2.164-1.082c.606-.302.858-1.075.555-1.68l-.924-1.849z"/></svg>
             Saya Berminat Bergabung
         </a>
     </div>
 
-    <!-- JAVASCRIPT UNTUK TIMER DAN FORM -->
-    <script>
-        // Form ke WA
-        function sendToWA(event) {
-            event.preventDefault(); 
-            const nama = document.getElementById('nama').value;
-            const kota = document.getElementById('kota').value;
-            const waAdmin = "6289699859149";
-            const textMessage = `Halo Admin, perkenalkan saya *${nama}* dari *${kota}*.\n\nSaya mengunjungi website kemitraan Bimbel Calistung Metode AMA. Bolehkah saya meminta E-Book gratis dan Proposal lengkapnya? Terima kasih!`;
-            const waLink = `https://wa.me/${waAdmin}?text=${encodeURIComponent(textMessage)}`;
-            window.open(waLink, '_blank');
-        }
-
-        // LOGIKA TIMER HINGGA AKHIR BULAN
-        function startTimer() {
-            function updateCountdown() {
-                const now = new Date();
-                // Mendapatkan hari terakhir di bulan ini (pukul 23:59:59)
-                const endOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59);
-                
-                const diff = endOfMonth - now;
-
-                if (diff <= 0) {
-                    document.getElementById('days').textContent = "00";
-                    document.getElementById('hours').textContent = "00";
-                    document.getElementById('minutes').textContent = "00";
-                    document.getElementById('seconds').textContent = "00";
-                    return;
-                }
-
-                // Kalkulasi hari, jam, menit, detik
-                const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-                const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-                const s = Math.floor((diff % (1000 * 60)) / 1000);
-
-                // Update tampilan dengan format 2 digit
-                document.getElementById('days').textContent = d < 10 ? '0' + d : d;
-                document.getElementById('hours').textContent = h < 10 ? '0' + h : h;
-                document.getElementById('minutes').textContent = m < 10 ? '0' + m : m;
-                document.getElementById('seconds').textContent = s < 10 ? '0' + s : s;
-            }
-
-            updateCountdown(); // Jalankan langsung agar tidak ada jeda 1 detik
-            setInterval(updateCountdown, 1000); // Perbarui setiap 1 detik
-        }
-        
-        // Mulai timer saat halaman selesai dimuat
-        document.addEventListener("DOMContentLoaded", startTimer);
-    </script>
     <!-- MODAL POPUP DETAIL FASILITAS (TAMPILAN FULL GAMBAR) -->
     <div id="facilityModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4 md:p-8">
-        
-        <!-- Ukuran pop-up diperlebar menjadi max-w-4xl agar gambar tampil maksimal -->
         <div class="bg-white rounded-3xl max-w-4xl w-full overflow-hidden shadow-2xl relative transform transition-all animate-scaleIn flex flex-col">
-            
-            <!-- Tombol Close (X) dibuat lebih menonjol -->
-            <button onclick="closeModal()" class="absolute top-4 right-4 bg-white/90 hover:bg-white text-slate-800 w-10 h-10 rounded-full flex items-center justify-center font-bold text-2xl z-10 transition shadow-lg border border-slate-200 focus:outline-none">
-                &times;
-            </button>
-            
-            <!-- Konten Modal -->
+            <button onclick="closeModal()" class="absolute top-4 right-4 bg-white/90 hover:bg-white text-slate-800 w-10 h-10 rounded-full flex items-center justify-center font-bold text-2xl z-10 transition shadow-lg border border-slate-200 focus:outline-none">&times;</button>
             <div class="max-h-[90vh] overflow-y-auto">
-                
-                <!-- Perubahan Kunci: w-full h-auto membuat gambar tampil 100% utuh tanpa terpotong -->
                 <img id="modalImg" src="" alt="Detail Fasilitas" class="w-full h-auto bg-slate-100">
-                
                 <div class="p-6 md:p-10 text-center md:text-left">
                     <h3 id="modalTitle" class="text-2xl md:text-4xl font-extrabold text-blue-900 mb-4"></h3>
                     <p id="modalDesc" class="text-slate-600 text-lg md:text-xl leading-relaxed mb-8"></p>
@@ -669,26 +514,106 @@
         </div>
     </div>
 
-    <!-- SCRIPT UNTUK MODAL -->
     <script>
+        // FUNGSI MODAL POPUP
         function openModal(title, desc, imgSrc) {
             document.getElementById('modalTitle').textContent = title;
             document.getElementById('modalDesc').textContent = desc;
             document.getElementById('modalImg').src = imgSrc;
             document.getElementById('facilityModal').classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // Mencegah background scroll
+            document.body.style.overflow = 'hidden'; 
         }
-
         function closeModal() {
             document.getElementById('facilityModal').classList.add('hidden');
-            document.body.style.overflow = 'auto'; // Mengembalikan fungsi scroll
+            document.body.style.overflow = 'auto'; 
+        }
+        document.getElementById('facilityModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+
+        // FUNGSI TIMER KEMITRAAN
+        function startTimer() {
+            function updateCountdown() {
+                const now = new Date();
+                const endOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59);
+                const diff = endOfMonth - now;
+                if (diff <= 0) return;
+                const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const s = Math.floor((diff % (1000 * 60)) / 1000);
+                document.getElementById('days').textContent = d < 10 ? '0' + d : d;
+                document.getElementById('hours').textContent = h < 10 ? '0' + h : h;
+                document.getElementById('minutes').textContent = m < 10 ? '0' + m : m;
+                document.getElementById('seconds').textContent = s < 10 ? '0' + s : s;
+            }
+            updateCountdown(); 
+            setInterval(updateCountdown, 1000);
         }
 
-        // Tutup modal jika klik di luar kotak putih
-        document.getElementById('facilityModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeModal();
+        // AUDIO SCRIPT (SESSION STORAGE DURASI)
+        document.addEventListener('DOMContentLoaded', () => {
+            startTimer(); // Jalankan timer
+
+            const music = document.getElementById('bg-music');
+            const toggleBtn = document.getElementById('music-toggle');
+            const iconMuted = document.getElementById('icon-muted');
+            const iconPlaying = document.getElementById('icon-playing');
+            let isPlaying = false;
+            let userHasInteracted = false;
+
+            const savedTime = sessionStorage.getItem('musicTime');
+            if (savedTime) music.currentTime = parseFloat(savedTime); 
+
+            const updateUI = () => {
+                if (isPlaying) {
+                    iconMuted.classList.add('hidden');
+                    iconPlaying.classList.remove('hidden');
+                    toggleBtn.classList.add('animate-pulse');
+                } else {
+                    iconMuted.classList.remove('hidden');
+                    iconPlaying.classList.add('hidden');
+                    toggleBtn.classList.remove('animate-pulse');
+                }
+            };
+            const playMusic = () => {
+                music.play().then(() => {
+                    isPlaying = true;
+                    sessionStorage.setItem('musicState', 'playing');
+                    updateUI();
+                }).catch(() => {});
+            };
+            const pauseMusic = () => {
+                music.pause();
+                isPlaying = false;
+                sessionStorage.setItem('musicState', 'paused');
+                updateUI();
+            };
+
+            const savedState = sessionStorage.getItem('musicState');
+            if (savedState === 'playing' || savedState === null) {
+                playMusic();
+            } else {
+                updateUI(); 
             }
+
+            window.addEventListener('beforeunload', () => {
+                sessionStorage.setItem('musicTime', music.currentTime);
+            });
+
+            document.body.addEventListener('click', () => {
+                if (!userHasInteracted && !isPlaying && sessionStorage.getItem('musicState') !== 'paused') {
+                    playMusic();
+                    userHasInteracted = true;
+                }
+            }, { once: true });
+
+            toggleBtn.addEventListener('click', (e) => {
+                e.stopPropagation(); 
+                if (isPlaying) pauseMusic();
+                else playMusic();
+                userHasInteracted = true;
+            });
         });
     </script>
 </body>
